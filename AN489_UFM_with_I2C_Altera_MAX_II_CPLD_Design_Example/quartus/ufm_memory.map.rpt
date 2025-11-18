@@ -1,0 +1,324 @@
+Analysis & Synthesis report for ufm_memory
+Mon Nov 05 10:43:38 2007
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Inverted Register Statistics
+  9. Source assignments for ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component
+ 10. Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr
+ 11. Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr
+ 12. Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr
+ 13. Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr
+ 14. Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Nov 05 10:43:38 2007    ;
+; Quartus II Version          ; 7.2 Build 151 09/26/2007 SJ Full Version ;
+; Revision Name               ; ufm_memory                               ;
+; Top-level Entity Name       ; ufm_memory                               ;
+; Family                      ; MAX II                                   ;
+; Total logic elements        ; 145                                      ;
+; Total pins                  ; 4                                        ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EPM240GT100C3      ;                    ;
+; Top-level entity name                                                          ; ufm_memory         ; ufm_memory         ;
+; Family name                                                                    ; MAX II             ; Stratix            ;
+; Use smart compilation                                                          ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                            ; 1                  ; 1                  ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; Parallel Synthesis                                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- MAX II                                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Block Design Naming                                                            ; Auto               ; Auto               ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; ufm_memory.v                     ; yes             ; User Verilog HDL File        ; U:/Work/MAXIIZ Design Examples/Designs/AN489_UFM_with_I2C_Altera_MAX_II_CPLD_Design_Example/quartus/ufm_memory.v             ;
+; a_graycounter.tdf                ; yes             ; Megafunction                 ; v:/altera/72/quartus/libraries/megafunctions/a_graycounter.tdf                                                               ;
+; db/a_graycounter_tuf.tdf         ; yes             ; Auto-Generated Megafunction  ; U:/Work/MAXIIZ Design Examples/Designs/AN489_UFM_with_I2C_Altera_MAX_II_CPLD_Design_Example/quartus/db/a_graycounter_tuf.tdf ;
+; db/a_graycounter_ruf.tdf         ; yes             ; Auto-Generated Megafunction  ; U:/Work/MAXIIZ Design Examples/Designs/AN489_UFM_with_I2C_Altera_MAX_II_CPLD_Design_Example/quartus/db/a_graycounter_ruf.tdf ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                              ;
++---------------------------------------------+--------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                      ;
++---------------------------------------------+--------------------------------------------------------------------------------------------+
+; Total logic elements                        ; 145                                                                                        ;
+;     -- Combinational with no register       ; 59                                                                                         ;
+;     -- Register only                        ; 32                                                                                         ;
+;     -- Combinational with a register        ; 54                                                                                         ;
+;                                             ;                                                                                            ;
+; Logic element usage by number of LUT inputs ;                                                                                            ;
+;     -- 4 input functions                    ; 66                                                                                         ;
+;     -- 3 input functions                    ; 19                                                                                         ;
+;     -- 2 input functions                    ; 22                                                                                         ;
+;     -- 1 input functions                    ; 5                                                                                          ;
+;     -- 0 input functions                    ; 1                                                                                          ;
+;                                             ;                                                                                            ;
+; Logic elements by mode                      ;                                                                                            ;
+;     -- normal mode                          ; 145                                                                                        ;
+;     -- arithmetic mode                      ; 0                                                                                          ;
+;     -- qfbk mode                            ; 0                                                                                          ;
+;     -- register cascade mode                ; 0                                                                                          ;
+;     -- synchronous clear/load mode          ; 0                                                                                          ;
+;     -- asynchronous clear/load mode         ; 53                                                                                         ;
+;                                             ;                                                                                            ;
+; Total registers                             ; 86                                                                                         ;
+; I/O pins                                    ; 4                                                                                          ;
+; Maximum fan-out node                        ; ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|wire_maxii_ufm_block1_drdout ;
+; Maximum fan-out                             ; 50                                                                                         ;
+; Total fan-out                               ; 558                                                                                        ;
+; Average fan-out                             ; 3.72                                                                                       ;
++---------------------------------------------+--------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                         ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                    ; Library Name ;
++--------------------------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |ufm_memory                                                        ; 145 (1)     ; 86           ; 0           ; 0            ; 0       ; 0         ; 0         ; 4    ; 0            ; 59 (1)       ; 32 (0)            ; 54 (0)           ; 0 (0)           ; 0 (0)      ; |ufm_memory                                                                                                                            ; work         ;
+;    |ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component| ; 144 (123)   ; 86           ; 0           ; 0            ; 0       ; 0         ; 0         ; 2    ; 0            ; 58 (53)      ; 32 (30)           ; 54 (40)          ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component                                                              ; work         ;
+;       |a_graycounter:data_pad_cntr|                                ; 6 (0)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr                                  ; work         ;
+;          |a_graycounter_tuf:auto_generated|                        ; 6 (6)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr|a_graycounter_tuf:auto_generated ; work         ;
+;       |a_graycounter:er_add_cntr|                                  ; 7 (0)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr                                    ; work         ;
+;          |a_graycounter_tuf:auto_generated|                        ; 7 (7)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr|a_graycounter_tuf:auto_generated   ; work         ;
+;       |a_graycounter:er_stg_cntr|                                  ; 2 (0)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr                                    ; work         ;
+;          |a_graycounter_ruf:auto_generated|                        ; 2 (2)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr|a_graycounter_ruf:auto_generated   ; work         ;
+;       |a_graycounter:general_cntr|                                 ; 4 (0)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr                                   ; work         ;
+;          |a_graycounter_tuf:auto_generated|                        ; 4 (4)       ; 4            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr|a_graycounter_tuf:auto_generated  ; work         ;
+;       |a_graycounter:stage_cntr|                                   ; 2 (0)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr                                     ; work         ;
+;          |a_graycounter_ruf:auto_generated|                        ; 2 (2)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr|a_graycounter_ruf:auto_generated    ; work         ;
++--------------------------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 86    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 53    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                        ;
++---------------------------------------------------------------------------+---------+
+; Inverted Register                                                         ; Fan out ;
++---------------------------------------------------------------------------+---------+
+; ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|drshft_reg  ; 1       ;
+; ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|read_oe_reg ; 1       ;
+; Total number of inverted registers = 2                                    ;         ;
++---------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------+
+; Source assignments for ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component ;
++-------------------------------+-------+------+---------------------------------------+
+; Assignment                    ; Value ; From ; To                                    ;
++-------------------------------+-------+------+---------------------------------------+
+; X_ON_VIOLATION_OPTION         ; OFF   ; -    ; -                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION ; OFF   ; -    ; -                                     ;
++-------------------------------+-------+------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr ;
++----------------+-------------------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value             ; Type                                                                                              ;
++----------------+-------------------+---------------------------------------------------------------------------------------------------+
+; PVALUE         ; 0                 ; Untyped                                                                                           ;
+; WIDTH          ; 4                 ; Signed Integer                                                                                    ;
+; CBXI_PARAMETER ; a_graycounter_tuf ; Untyped                                                                                           ;
++----------------+-------------------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value             ; Type                                                                                            ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+; PVALUE         ; 0                 ; Untyped                                                                                         ;
+; WIDTH          ; 4                 ; Signed Integer                                                                                  ;
+; CBXI_PARAMETER ; a_graycounter_tuf ; Untyped                                                                                         ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value             ; Type                                                                                            ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+; PVALUE         ; 0                 ; Untyped                                                                                         ;
+; WIDTH          ; 2                 ; Signed Integer                                                                                  ;
+; CBXI_PARAMETER ; a_graycounter_ruf ; Untyped                                                                                         ;
++----------------+-------------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr ;
++----------------+-------------------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value             ; Type                                                                                             ;
++----------------+-------------------+--------------------------------------------------------------------------------------------------+
+; PVALUE         ; 0                 ; Untyped                                                                                          ;
+; WIDTH          ; 4                 ; Signed Integer                                                                                   ;
+; CBXI_PARAMETER ; a_graycounter_tuf ; Untyped                                                                                          ;
++----------------+-------------------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr ;
++----------------+-------------------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value             ; Type                                                                                           ;
++----------------+-------------------+------------------------------------------------------------------------------------------------+
+; PVALUE         ; 0                 ; Untyped                                                                                        ;
+; WIDTH          ; 2                 ; Signed Integer                                                                                 ;
+; CBXI_PARAMETER ; a_graycounter_ruf ; Untyped                                                                                        ;
++----------------+-------------------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.2 Build 151 09/26/2007 SJ Full Version
+    Info: Processing started: Mon Nov 05 10:43:33 2007
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ufm_memory -c ufm_memory
+Warning (10463): Verilog HDL Declaration warning at ufm_memory.v(896): "program" is SystemVerilog-2005 keyword
+Info: Found 2 design units, including 2 entities, in source file ufm_memory.v
+    Info: Found entity 1: ufm_memory_altufm_i2c_91u
+    Info: Found entity 2: ufm_memory
+Info: Elaborating entity "ufm_memory" for the top level hierarchy
+Info: Elaborating entity "ufm_memory_altufm_i2c_91u" for hierarchy "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component"
+Info: Found 1 design units, including 1 entities, in source file v:/altera/72/quartus/libraries/megafunctions/a_graycounter.tdf
+    Info: Found entity 1: a_graycounter
+Info: Elaborating entity "a_graycounter" for hierarchy "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr"
+Info: Elaborated megafunction instantiation "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr"
+Info: Found 1 design units, including 1 entities, in source file db/a_graycounter_tuf.tdf
+    Info: Found entity 1: a_graycounter_tuf
+Info: Elaborating entity "a_graycounter_tuf" for hierarchy "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr|a_graycounter_tuf:auto_generated"
+Info: Elaborating entity "a_graycounter" for hierarchy "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr"
+Info: Elaborated megafunction instantiation "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr"
+Info: Found 1 design units, including 1 entities, in source file db/a_graycounter_ruf.tdf
+    Info: Found entity 1: a_graycounter_ruf
+Info: Elaborating entity "a_graycounter_ruf" for hierarchy "ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr|a_graycounter_ruf:auto_generated"
+Info: Registers with preset signals will power-up high
+Info: Implemented 150 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 0 output pins
+    Info: Implemented 2 bidirectional pins
+    Info: Implemented 145 logic cells
+    Info: Implemented 1 User Flash Memory blocks
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Allocated 143 megabytes of memory during processing
+    Info: Processing ended: Mon Nov 05 10:43:39 2007
+    Info: Elapsed time: 00:00:06
+
+

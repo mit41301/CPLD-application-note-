@@ -1,0 +1,154 @@
+|ufm_memory
+a1 => a1~0.IN1
+a2 => a2~0.IN1
+scl <= ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component.scl
+sda <= ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component.sda
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component
+a1 => Equal0.IN11
+a2 => Equal0.IN10
+scl <= maxii_io2
+sda <= maxii_io3
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr
+aclr => a_graycounter_tuf:auto_generated.aclr
+clk_en => a_graycounter_tuf:auto_generated.clk_en
+clock => a_graycounter_tuf:auto_generated.clock
+cnt_en => ~NO_FANOUT~
+q[0] <= a_graycounter_tuf:auto_generated.q[0]
+q[1] <= a_graycounter_tuf:auto_generated.q[1]
+q[2] <= a_graycounter_tuf:auto_generated.q[2]
+q[3] <= a_graycounter_tuf:auto_generated.q[3]
+qbin[0] <= <GND>
+qbin[1] <= <GND>
+qbin[2] <= <GND>
+qbin[3] <= <GND>
+sclr => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr|a_graycounter_tuf:auto_generated
+clk_en => dffe1a[3].ENA
+clk_en => dffe1a[2].ENA
+clk_en => dffe1a[1].ENA
+clk_en => dffe1a[0].ENA
+clock => dffe1a[3].CLK
+clock => dffe1a[2].CLK
+clock => dffe1a[1].CLK
+clock => dffe1a[0].CLK
+q[0] <= dffe1a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe1a[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffe1a[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffe1a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr
+aclr => a_graycounter_tuf:auto_generated.aclr
+clk_en => a_graycounter_tuf:auto_generated.clk_en
+clock => a_graycounter_tuf:auto_generated.clock
+cnt_en => ~NO_FANOUT~
+q[0] <= a_graycounter_tuf:auto_generated.q[0]
+q[1] <= a_graycounter_tuf:auto_generated.q[1]
+q[2] <= a_graycounter_tuf:auto_generated.q[2]
+q[3] <= a_graycounter_tuf:auto_generated.q[3]
+qbin[0] <= <GND>
+qbin[1] <= <GND>
+qbin[2] <= <GND>
+qbin[3] <= <GND>
+sclr => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr|a_graycounter_tuf:auto_generated
+clk_en => dffe1a[3].ENA
+clk_en => dffe1a[2].ENA
+clk_en => dffe1a[1].ENA
+clk_en => dffe1a[0].ENA
+clock => dffe1a[3].CLK
+clock => dffe1a[2].CLK
+clock => dffe1a[1].CLK
+clock => dffe1a[0].CLK
+q[0] <= dffe1a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe1a[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffe1a[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffe1a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr
+aclr => a_graycounter_ruf:auto_generated.aclr
+clk_en => a_graycounter_ruf:auto_generated.clk_en
+clock => a_graycounter_ruf:auto_generated.clock
+cnt_en => ~NO_FANOUT~
+q[0] <= a_graycounter_ruf:auto_generated.q[0]
+q[1] <= a_graycounter_ruf:auto_generated.q[1]
+qbin[0] <= <GND>
+qbin[1] <= <GND>
+sclr => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr|a_graycounter_ruf:auto_generated
+clk_en => dffe1a[1].ENA
+clk_en => dffe1a[0].ENA
+clock => dffe1a[1].CLK
+clock => dffe1a[0].CLK
+q[0] <= dffe1a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe1a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr
+aclr => a_graycounter_tuf:auto_generated.aclr
+clk_en => a_graycounter_tuf:auto_generated.clk_en
+clock => a_graycounter_tuf:auto_generated.clock
+cnt_en => ~NO_FANOUT~
+q[0] <= a_graycounter_tuf:auto_generated.q[0]
+q[1] <= a_graycounter_tuf:auto_generated.q[1]
+q[2] <= a_graycounter_tuf:auto_generated.q[2]
+q[3] <= a_graycounter_tuf:auto_generated.q[3]
+qbin[0] <= <GND>
+qbin[1] <= <GND>
+qbin[2] <= <GND>
+qbin[3] <= <GND>
+sclr => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr|a_graycounter_tuf:auto_generated
+clk_en => dffe1a[3].ENA
+clk_en => dffe1a[2].ENA
+clk_en => dffe1a[1].ENA
+clk_en => dffe1a[0].ENA
+clock => dffe1a[3].CLK
+clock => dffe1a[2].CLK
+clock => dffe1a[1].CLK
+clock => dffe1a[0].CLK
+q[0] <= dffe1a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe1a[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffe1a[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffe1a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr
+aclr => a_graycounter_ruf:auto_generated.aclr
+clk_en => a_graycounter_ruf:auto_generated.clk_en
+clock => a_graycounter_ruf:auto_generated.clock
+cnt_en => ~NO_FANOUT~
+q[0] <= a_graycounter_ruf:auto_generated.q[0]
+q[1] <= a_graycounter_ruf:auto_generated.q[1]
+qbin[0] <= <GND>
+qbin[1] <= <GND>
+sclr => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+
+
+|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr|a_graycounter_ruf:auto_generated
+clk_en => dffe1a[1].ENA
+clk_en => dffe1a[0].ENA
+clock => dffe1a[1].CLK
+clock => dffe1a[0].CLK
+q[0] <= dffe1a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe1a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

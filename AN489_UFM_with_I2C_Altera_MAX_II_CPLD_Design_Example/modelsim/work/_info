@@ -1,0 +1,43 @@
+m255
+13
+cModel Technology
+dE:\MDN-WORK\design examples\complete_dec_cycle\dec_cycle_files\Voltage Level Shifter\modelsim
+vtest_ufm_memory
+IOWN]bkNYf4WFSe5L[6Y1l2
+Vg:z52IW3GcKSZ]VgRGU^`0
+dE:\MDN-WORK\design examples\complete_dec_cycle\dec_cycle_files\UFM Memory with I2C\modelsim
+w1167307267
+FE:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/test_ufm_memory.v
+L0 8
+Vg:z52IW3GcKSZ]VgRGU^`0
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vufm_memory
+IFmzT5>U28FWd;jL?f9S`a3
+V9JK9DCbBKa6iR@cOL[`So3
+dE:\MDN-WORK\design examples\complete_dec_cycle\dec_cycle_files\UFM Memory with I2C\modelsim
+w1164950704
+FE:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/ufm_memory.v
+L0 992
+V9JK9DCbBKa6iR@cOL[`So3
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vufm_memory_altufm_i2c_91u
+IEAa]FSKXVMC_5hQV29k>E0
+VBDDTYDL?Cm>BTEamd7JTE2
+dE:\MDN-WORK\design examples\complete_dec_cycle\dec_cycle_files\UFM Memory with I2C\modelsim
+w1164950704
+FE:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/ufm_memory.v
+L0 48
+VBDDTYDL?Cm>BTEamd7JTE2
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000

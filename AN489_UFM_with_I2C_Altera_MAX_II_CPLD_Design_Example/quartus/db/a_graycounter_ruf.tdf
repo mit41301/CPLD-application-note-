@@ -1,0 +1,39 @@
+--a_graycounter CARRY_CHAIN="MANUAL" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="MAX II" WIDTH=2 aclr clk_en clock q carry_chain_length=48 ignore_carry_buffers="OFF"
+--VERSION_BEGIN 7.2 cbx_a_gray2bin 2006:02:28:14:37:30:SJ cbx_a_graycounter 2007:02:22:13:58:22:SJ cbx_cycloneii 2007:06:13:15:47:32:SJ cbx_flex10ke 2006:01:09:11:13:48:SJ cbx_mgl 2007:08:03:15:48:12:SJ cbx_stratix 2007:05:02:16:27:14:SJ cbx_stratixii 2007:06:28:17:26:26:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2007 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 2 
+SUBDESIGN a_graycounter_ruf
+( 
+	aclr	:	input;
+	clk_en	:	input;
+	clock	:	input;
+	q[1..0]	:	output;
+) 
+VARIABLE 
+	dffe1a[1..0] : dffe;
+
+BEGIN 
+	dffe1a[].clk = clock;
+	dffe1a[].clrn = ( (! aclr), (! aclr));
+	dffe1a[].d = ( dffe1a[0..0].q, (! dffe1a[1..1].q));
+	dffe1a[].ena = clk_en;
+	q[] = dffe1a[].q;
+END;
+--VALID FILE

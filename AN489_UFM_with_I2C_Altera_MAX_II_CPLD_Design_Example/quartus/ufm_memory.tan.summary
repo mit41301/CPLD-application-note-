@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.476 ns
+From           : sda
+To             : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT
+From Clock     : --
+To Clock       : scl
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.057 ns
+From           : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|dev_add_reg[4]
+To             : sda
+From Clock     : scl
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.100 ns
+From           : a2
+To             : sda
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 27.269 ns
+From           : sda
+To             : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT
+From Clock     : --
+To Clock       : scl
+Failed Paths   : 0
+
+Type           : Clock Setup: 'scl'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.37 MHz ( period = 106.745 ns )
+From           : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT
+To             : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT
+From Clock     : scl
+To Clock       : scl
+Failed Paths   : 0
+
+Type           : Clock Hold: 'scl'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a0_dly_reg
+To             : ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT
+From Clock     : scl
+To Clock       : scl
+Failed Paths   : 8
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 8
+
+--------------------------------------------------------------------------------------
+

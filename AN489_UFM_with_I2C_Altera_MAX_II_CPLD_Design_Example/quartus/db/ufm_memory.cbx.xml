@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ufm_memory">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_add_cntr" CBX_FILE_NAME="a_graycounter_tuf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:data_pad_cntr" CBX_FILE_NAME="a_graycounter_tuf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:er_stg_cntr" CBX_FILE_NAME="a_graycounter_ruf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:general_cntr" CBX_FILE_NAME="a_graycounter_tuf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ufm_memory|ufm_memory_altufm_i2c_91u:ufm_memory_altufm_i2c_91u_component|a_graycounter:stage_cntr" CBX_FILE_NAME="a_graycounter_ruf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,16 @@
+{E:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/test_ufm_memory.v} {1 {vlog -work work {E:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/test_ufm_memory.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module test_ufm_memory
+
+Top level modules:
+	test_ufm_memory
+
+} {} {}} {E:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/ufm_memory.v} {1 {vlog -work work {E:/MDN-WORK/design examples/complete_dec_cycle/dec_cycle_files/UFM Memory with I2C/modelsim/ufm_memory.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module ufm_memory_altufm_i2c_91u
+-- Compiling module ufm_memory
+
+Top level modules:
+	ufm_memory
+
+} {} {}}
