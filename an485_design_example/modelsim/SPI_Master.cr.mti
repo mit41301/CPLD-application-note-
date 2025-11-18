@@ -1,0 +1,29 @@
+{C:/srikanth/altera/2ndcycle stuff/final stuff/SPI master/modelsim/SPI_Master_test.v} {1 {vlog -work work {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI master/modelsim/SPI_Master_test.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_master_test
+
+Top level modules:
+	SPI_master_test
+
+} {} {}} SPI_Master_test.v {1 {vlog -work work SPI_Master_test.v
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_master_test
+
+Top level modules:
+	SPI_master_test
+
+} {} {}} {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI master/modelsim/SPI_Master.v} {1 {vlog -work work {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI master/modelsim/SPI_Master.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_Master
+
+Top level modules:
+	SPI_Master
+
+} {} {}} SPI_Master.v {1 {vlog -work work SPI_Master.v
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_Master
+
+Top level modules:
+	SPI_Master
+
+} {} {}}

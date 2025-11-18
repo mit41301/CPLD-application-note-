@@ -1,0 +1,32 @@
+m255
+13
+cModel Technology
+dC:\srikanth\altera\2ndcycle stuff\final stuff\SPI to I2C\modelsim
+vSPI_Master
+Id4KcH^l`Egi=Q`b]^T?>^1
+Ve8Ml_]>:a3YFV82[T6FIj1
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI master\modelsim
+w1170881966
+FSPI_Master.v
+L0 6
+Ve8Ml_]>:a3YFV82[T6FIj1
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@s@p@i_@master
+vSPI_master_test
+Ii:h^zKb@n63WO<8^KdSg61
+Vn09LNDlCVQ7eI;>l5EcQi1
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI master\modelsim
+w1171091783
+FSPI_Master_test.v
+L0 8
+Vn09LNDlCVQ7eI;>l5EcQi1
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@s@p@i_master_test

@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.546 ns
+From           : CS
+To             : data_out[1]
+From Clock     : --
+To Clock       : pro_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.949 ns
+From           : mosi~reg0
+To             : mosi
+From Clock     : pro_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.987 ns
+From           : RD
+To             : data_bus[5]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.176 ns
+From           : miso
+To             : shift_register[0]
+From Clock     : --
+To Clock       : pro_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pro_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 58.71 MHz ( period = 17.032 ns )
+From           : shift_register[7]
+To             : rxdata[7]
+From Clock     : pro_clk
+To Clock       : pro_clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pro_clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : shift_register[1]
+To             : shift_register[2]
+From Clock     : pro_clk
+To Clock       : pro_clk
+Failed Paths   : 21
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 21
+
+--------------------------------------------------------------------------------------
+

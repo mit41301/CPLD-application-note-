@@ -1,0 +1,50 @@
+# Reading C:/altera/72_cc/modelsim_ae/tcl/vsim/pref.tcl 
+#  OpenFile "D:/Altera/MAXIIZ update/Design example/AN485/modelsim/SPI_Master.mpf" 
+# Loading project SPI_Master
+vsim -gui work.SPI_master_test
+# vsim -gui work.SPI_master_test 
+# //  ModelSim ALTERA 6.1g Aug 12 2006 
+# //
+# //  Copyright 2006 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.SPI_master_test
+# Loading work.SPI_Master
+add wave /*
+run -all
+# Transmit Buffer loaded
+# SS[0] = 0, CPHA = 0, CPOL = 0 at time:                  40
+# Observe Waveform for spi clock frequency, spi data changing at falling egde, valid at rising edge
+# Data transmitted to spi slave verified                 345
+# Interrupt detected at time:                 410
+# Data received from spi slave verified                 420
+# 
+#  Transmit Buffer reloaded
+# Observe Waveform for spi clock frequency, spi data changing at rising edge and valid at falling edge
+# SS[4] = 0, CPHA = 0, CPOL = 1 at time:                 450
+# Data transmitted to spi slave verified                1055
+# Interrupt detected at time:                1140
+# Data received from spi slave verified                1150
+# 
+#  Transmit Buffer reloaded
+# Observe Waveform for spi clock frequency, spi data changing at rising edge and valid at falling edge
+# SS[7] = 0, CPHA = 1, CPOL = 0 at time:                1180
+# Data transmitted to spi slave verified                2435
+# interrupt detected at time:                2480
+# Data received from spi slave verified                2490
+# 
+#  Transmit Buffer reloaded
+# Observe Waveform for spi clock frequency, spi data changing at falling edge and valid at rising edge
+# SS[3] = 0, CPHA = 1, CPOL = 1 at time:                2520
+# Data transmitted to spi slave verified                7515
+# Interrupt detected at time:                7560
+# Data received from spi slave verified                7570
+# 
+#  PASS: hit break to stop simulation
+# Break key hit 
+# Simulation stop requested.

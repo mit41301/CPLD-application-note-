@@ -1,0 +1,61 @@
+Version 7.2 Build 151 09/26/2007 SJ Full Version
+39
+2318
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+C:|srikanth|altera|battle_board|rcvd_files|8feb07|quartus|extracted|QuartusII51sp1|cntr16_load_fi16|cntr16_load_fi1_new_restored_sri|db|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SPI_Master
+# storage
+db|SPI_Master.(0).cnf
+db|SPI_Master.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+SPI_Master.v
+8164cdb12751a15fba3689e4495f14
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|72_cc|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+
