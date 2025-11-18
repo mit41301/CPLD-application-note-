@@ -1,0 +1,29 @@
+nand_flash_testbench.v {1 {vlog -work work nand_flash_testbench.v
+Model Technology ModelSim ALTERA vlog 6.1g Compiler 2006.08 Aug 12 2006
+-- Compiling module nand_flash_testbench
+
+Top level modules:
+	nand_flash_testbench
+
+} {} {}} nand_interface.v {1 {vlog -work work nand_interface.v
+Model Technology ModelSim ALTERA vlog 6.1g Compiler 2006.08 Aug 12 2006
+-- Compiling module nand_interface
+
+Top level modules:
+	nand_interface
+
+} {} {}} {C:/Documents and Settings/srikanth/Desktop/3rd cycle stuff/NAND/modelsim/nand_interface.v} {1 {vlog -work work {C:/Documents and Settings/srikanth/Desktop/3rd cycle stuff/NAND/modelsim/nand_interface.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module nand_interface
+
+Top level modules:
+	nand_interface
+
+} {} {}} {C:/Documents and Settings/srikanth/Desktop/3rd cycle stuff/NAND/modelsim/nand_flash_testbench.v} {1 {vlog -work work {C:/Documents and Settings/srikanth/Desktop/3rd cycle stuff/NAND/modelsim/nand_flash_testbench.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module nand_flash_testbench
+
+Top level modules:
+	nand_flash_testbench
+
+} {} {}}

@@ -1,0 +1,50 @@
+# Reading C:/altera/72_cc/modelsim_ae/tcl/vsim/pref.tcl 
+#  OpenFile "D:/Altera/MAXIIZ update/Design example/AN500/modelsim/nand_interface.mpf" 
+# Loading project nand_interface
+vsim -gui work.nand_flash_testbench
+# vsim -gui work.nand_flash_testbench 
+# //  ModelSim ALTERA 6.1g Aug 12 2006 
+# //
+# //  Copyright 2006 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.nand_flash_testbench
+# Loading work.nand_interface
+add wave /*
+run -all
+# This Test Bench checks the values of the various interfacing signals of the Nand Flash Device for the different commands supported
+# Reset command.                  10
+# Command to reset the device verified                  15
+# Disasserting Write Protect.                  20
+# Command to disassert Write Protect verified                  25
+# Disasserting Chip Enable.                  30
+# Command to disassert Chip Enable verified                  35
+# Asserting Chip Enable.                  40
+# Command to assert Chip Enable verified                  45
+# Asserting Address Latch Enable.                  50
+# Command to assert Address Latch Enable verified                  55
+# Asserting Write Enable.                  60
+# Command to asserting Write Enable verified                  65
+# Disasserting Address Latch Enable.                  70
+# Command to disassert Address Latch Enable verified                  75
+# Asserting Command Latch Enable.                  80
+# Command to assert Command Latch Enable verified                  85
+# Asserting Spare Area Enable.                  90
+# Command to assert Spare Area Enable verified                  95
+# Disasserting Spare Area Enable.                 100
+# Command to disassert Spare Area Enable verified                 105
+# Asserting Read Enable.                 110
+# Command to assert Read Enable verified                 115
+# Asserting Write Protect.                 120
+# Command to assert Write Protect verified                 125
+# Checking the ready/busy signal.                 130
+# Command for checking the ready/busy signal verified                 135
+# Disasserting Chip Enable.                 140
+# Command to disassert Chip Enable verified                 145
+# All outputs successfully verified.......TEST PASSED................                 145
+# Break at nand_flash_testbench.v line 146
