@@ -1,0 +1,12 @@
+# Reading C:/Modeltech_5.8e/tcl/vsim/pref.tcl 
+# //  ModelSim SE 5.8e Aug 28 2004 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2004
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+#  OpenFile "U:/Work/MAXIIZ Design Examples/Designs/AN486_SPI_to_I2C_Altera_MAX_II_CPLD_Design_Example/modelsim/vsim.wlf" 
+# WLF Error: WLF file is incompatible with Modelsim 5.8e (61 > 42).
+# Cannot open file: U:/Work/MAXIIZ Design Examples/Designs/AN486_SPI_to_I2C_Altera_MAX_II_CPLD_Design_Example/modelsim/vsim.wlf

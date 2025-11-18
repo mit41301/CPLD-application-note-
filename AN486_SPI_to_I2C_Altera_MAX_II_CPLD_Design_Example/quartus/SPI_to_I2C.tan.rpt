@@ -1,0 +1,514 @@
+Classic Timing Analyzer report for SPI_to_I2C
+Mon Nov 05 10:37:03 2007
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'SPI_sclk'
+  6. Clock Setup: 'I2C_scl'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                 ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                      ; To                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.135 ns                         ; SPI_mosi                  ; SPI_slave:spi|data_in[1]   ; --         ; SPI_sclk ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.268 ns                         ; SPI_slave:spi|miso        ; SPI_miso                   ; SPI_sclk   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 1.385 ns                         ; SPI_cs                    ; SPI_slave:spi|count_1[2]   ; --         ; SPI_sclk ; 0            ;
+; Clock Setup: 'I2C_scl'       ; N/A   ; None          ; 105.93 MHz ( period = 9.440 ns ) ; I2C_master:i2c|count[2]   ; I2C_master:i2c|data_out[2] ; I2C_scl    ; I2C_scl  ; 0            ;
+; Clock Setup: 'SPI_sclk'      ; N/A   ; None          ; 143.88 MHz ( period = 6.950 ns ) ; SPI_slave:spi|count_byte1 ; SPI_slave:spi|data_in[3]   ; SPI_sclk   ; SPI_sclk ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                           ;                            ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+----------------------------+------------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                      ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                         ; Setting            ; From ; To ; Entity Name ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                    ; EPM240GT100C3      ;      ;    ;             ;
+; Timing Models                                                  ; Final              ;      ;    ;             ;
+; Default hold multicycle                                        ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                      ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                         ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                 ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                               ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                          ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                        ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                               ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                           ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node          ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                          ; 10                 ;      ;    ;             ;
+; Number of paths to report                                      ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                   ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                         ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                     ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                   ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis ; Off                ;      ;    ;             ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; SPI_sclk        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; I2C_scl         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; I2C_sda         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SPI_cs          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SPI_sclk'                                                                                                                                                                                                          ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 143.88 MHz ( period = 6.950 ns )               ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.032 ns                ;
+; N/A   ; 146.03 MHz ( period = 6.848 ns )               ; SPI_slave:spi|done           ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; 151.15 MHz ( period = 6.616 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.865 ns                ;
+; N/A   ; 153.56 MHz ( period = 6.512 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.813 ns                ;
+; N/A   ; 156.20 MHz ( period = 6.402 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.758 ns                ;
+; N/A   ; 160.77 MHz ( period = 6.220 ns )               ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.667 ns                ;
+; N/A   ; 162.55 MHz ( period = 6.152 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.633 ns                ;
+; N/A   ; 163.13 MHz ( period = 6.130 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 163.19 MHz ( period = 6.128 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.621 ns                ;
+; N/A   ; 166.61 MHz ( period = 6.002 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.558 ns                ;
+; N/A   ; 168.07 MHz ( period = 5.950 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.532 ns                ;
+; N/A   ; 168.41 MHz ( period = 5.938 ns )               ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.526 ns                ;
+; N/A   ; 168.58 MHz ( period = 5.932 ns )               ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.523 ns                ;
+; N/A   ; 168.69 MHz ( period = 5.928 ns )               ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.521 ns                ;
+; N/A   ; 168.69 MHz ( period = 5.928 ns )               ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.521 ns                ;
+; N/A   ; 168.92 MHz ( period = 5.920 ns )               ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.517 ns                ;
+; N/A   ; 170.07 MHz ( period = 5.880 ns )               ; SPI_slave:spi|count[2]       ; SPI_slave:spi|done1          ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.497 ns                ;
+; N/A   ; 173.25 MHz ( period = 5.772 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.443 ns                ;
+; N/A   ; 173.49 MHz ( period = 5.764 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.439 ns                ;
+; N/A   ; 174.09 MHz ( period = 5.744 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.429 ns                ;
+; N/A   ; 174.52 MHz ( period = 5.730 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.422 ns                ;
+; N/A   ; 174.58 MHz ( period = 5.728 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.421 ns                ;
+; N/A   ; 176.24 MHz ( period = 5.674 ns )               ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.394 ns                ;
+; N/A   ; 178.70 MHz ( period = 5.596 ns )               ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.355 ns                ;
+; N/A   ; 180.05 MHz ( period = 5.554 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.334 ns                ;
+; N/A   ; 180.70 MHz ( period = 5.534 ns )               ; SPI_slave:spi|count[1]       ; SPI_slave:spi|done1          ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.324 ns                ;
+; N/A   ; 183.62 MHz ( period = 5.446 ns )               ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.280 ns                ;
+; N/A   ; 184.98 MHz ( period = 5.406 ns )               ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.260 ns                ;
+; N/A   ; 186.36 MHz ( period = 5.366 ns )               ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.240 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.200 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.155 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.147 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.145 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.144 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.082 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.080 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[1]       ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 4.552 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|done1          ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.054 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.052 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.051 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.048 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.038 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.019 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.015 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.932 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.898 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.895 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.895 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.888 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.885 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.883 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.867 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.858 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.851 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.793 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.790 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.790 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.783 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.778 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.770 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.764 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[2]     ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.758 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.754 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte1    ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.749 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.929 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[0]     ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.669 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.668 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_1[1]     ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.664 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.752 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.493 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.347 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.343 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.246 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.243 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.241 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 3.181 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|done1          ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.261 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.956 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.879 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.875 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.861 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.860 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[2]       ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.827 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.614 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.609 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.567 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[4]     ; SPI_slave:spi|data_in[4]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.385 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[7] ; SPI_slave:spi|command_reg[7] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.145 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte     ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.045 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[3] ; SPI_slave:spi|command_reg[3] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.042 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[2]       ; SPI_slave:spi|count_byte     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 2.012 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|count[1]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.885 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|count[2]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.884 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|count_byte     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.884 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[2]       ; SPI_slave:spi|count_1[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.862 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[4] ; SPI_slave:spi|command_reg[4] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.561 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|count_1[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.483 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[1]       ; SPI_slave:spi|count_1[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.479 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte     ; SPI_slave:spi|count_byte1    ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.410 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[1]       ; SPI_slave:spi|count[1]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.363 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[6] ; SPI_slave:spi|command_reg[6] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.353 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|miso           ; SPI_slave:spi|miso           ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.328 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[7]     ; SPI_slave:spi|data_in[7]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.314 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[2]     ; SPI_slave:spi|data_in[2]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.310 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[0]     ; SPI_slave:spi|data_in[0]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.308 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[3]     ; SPI_slave:spi|data_in[3]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[0] ; SPI_slave:spi|command_reg[0] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.292 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[5] ; SPI_slave:spi|command_reg[5] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.291 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[2] ; SPI_slave:spi|command_reg[2] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.291 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|command_reg[1] ; SPI_slave:spi|command_reg[1] ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.291 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|done1          ; SPI_slave:spi|done1          ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.285 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count_byte     ; SPI_slave:spi|count_byte     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.259 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[2]       ; SPI_slave:spi|count[2]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.243 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[1]     ; SPI_slave:spi|data_in[1]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.243 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[5]     ; SPI_slave:spi|data_in[5]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.237 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|data_in[6]     ; SPI_slave:spi|data_in[6]     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.226 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[1]       ; SPI_slave:spi|count[2]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.004 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[1]       ; SPI_slave:spi|count_byte     ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 1.004 ns                ;
+; N/A   ; Restricted to 188.01 MHz ( period = 5.319 ns ) ; SPI_slave:spi|count[0]       ; SPI_slave:spi|count[0]       ; SPI_sclk   ; SPI_sclk ; None                        ; None                      ; 0.958 ns                ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'I2C_scl'                                                                                                                                                                                                           ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 105.93 MHz ( period = 9.440 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.277 ns                ;
+; N/A   ; 108.32 MHz ( period = 9.232 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.173 ns                ;
+; N/A   ; 112.08 MHz ( period = 8.922 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.018 ns                ;
+; N/A   ; 112.16 MHz ( period = 8.916 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.015 ns                ;
+; N/A   ; 112.21 MHz ( period = 8.912 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.013 ns                ;
+; N/A   ; 112.28 MHz ( period = 8.906 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.010 ns                ;
+; N/A   ; 112.33 MHz ( period = 8.902 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.008 ns                ;
+; N/A   ; 114.84 MHz ( period = 8.708 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.911 ns                ;
+; N/A   ; 114.89 MHz ( period = 8.704 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.909 ns                ;
+; N/A   ; 114.97 MHz ( period = 8.698 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.906 ns                ;
+; N/A   ; 115.02 MHz ( period = 8.694 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.904 ns                ;
+; N/A   ; 116.93 MHz ( period = 8.552 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.833 ns                ;
+; N/A   ; 119.08 MHz ( period = 8.398 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.756 ns                ;
+; N/A   ; 119.13 MHz ( period = 8.394 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.754 ns                ;
+; N/A   ; 119.22 MHz ( period = 8.388 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.751 ns                ;
+; N/A   ; 119.27 MHz ( period = 8.384 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.749 ns                ;
+; N/A   ; 120.16 MHz ( period = 8.322 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.718 ns                ;
+; N/A   ; 120.77 MHz ( period = 8.280 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.697 ns                ;
+; N/A   ; 123.24 MHz ( period = 8.114 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.614 ns                ;
+; N/A   ; 124.56 MHz ( period = 8.028 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.571 ns                ;
+; N/A   ; 124.63 MHz ( period = 8.024 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.569 ns                ;
+; N/A   ; 124.72 MHz ( period = 8.018 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.566 ns                ;
+; N/A   ; 124.78 MHz ( period = 8.014 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.564 ns                ;
+; N/A   ; 125.41 MHz ( period = 7.974 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.544 ns                ;
+; N/A   ; 128.14 MHz ( period = 7.804 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.459 ns                ;
+; N/A   ; 128.24 MHz ( period = 7.798 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.456 ns                ;
+; N/A   ; 128.77 MHz ( period = 7.766 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.440 ns                ;
+; N/A   ; 128.93 MHz ( period = 7.756 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.435 ns                ;
+; N/A   ; 129.00 MHz ( period = 7.752 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.433 ns                ;
+; N/A   ; 129.10 MHz ( period = 7.746 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.430 ns                ;
+; N/A   ; 129.17 MHz ( period = 7.742 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.428 ns                ;
+; N/A   ; 134.12 MHz ( period = 7.456 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.285 ns                ;
+; N/A   ; 134.52 MHz ( period = 7.434 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.274 ns                ;
+; N/A   ; 135.24 MHz ( period = 7.394 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.254 ns                ;
+; N/A   ; 139.16 MHz ( period = 7.186 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.150 ns                ;
+; N/A   ; 139.63 MHz ( period = 7.162 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.138 ns                ;
+; N/A   ; 141.12 MHz ( period = 7.086 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.100 ns                ;
+; N/A   ; 141.16 MHz ( period = 7.084 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 145.43 MHz ( period = 6.876 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.995 ns                ;
+; N/A   ; 145.43 MHz ( period = 6.876 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.995 ns                ;
+; N/A   ; 146.76 MHz ( period = 6.814 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.964 ns                ;
+; N/A   ; 152.30 MHz ( period = 6.566 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.840 ns                ;
+; N/A   ; 153.70 MHz ( period = 6.506 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.810 ns                ;
+; N/A   ; 160.41 MHz ( period = 6.234 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.674 ns                ;
+; N/A   ; 161.39 MHz ( period = 6.196 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.655 ns                ;
+; N/A   ; 161.73 MHz ( period = 6.183 ns )               ; I2C_master:i2c|count[0]      ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 5.740 ns                ;
+; N/A   ; 166.39 MHz ( period = 6.010 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.562 ns                ;
+; N/A   ; 168.15 MHz ( period = 5.947 ns )               ; I2C_master:i2c|count[1]      ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 5.504 ns                ;
+; N/A   ; 174.34 MHz ( period = 5.736 ns )               ; I2C_master:i2c|count[2]      ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 5.293 ns                ;
+; N/A   ; 182.28 MHz ( period = 5.486 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.300 ns                ;
+; N/A   ; 182.42 MHz ( period = 5.482 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.298 ns                ;
+; N/A   ; 182.62 MHz ( period = 5.476 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.295 ns                ;
+; N/A   ; 182.75 MHz ( period = 5.472 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.293 ns                ;
+; N/A   ; 189.68 MHz ( period = 5.272 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.193 ns                ;
+; N/A   ; 198.45 MHz ( period = 5.039 ns )               ; I2C_master:i2c|count[3]      ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.596 ns                ;
+; N/A   ; 204.42 MHz ( period = 4.892 ns )               ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.003 ns                ;
+; N/A   ; 207.99 MHz ( period = 4.808 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|count[2]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.365 ns                ;
+; N/A   ; 208.16 MHz ( period = 4.804 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|count[0]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.361 ns                ;
+; N/A   ; 208.20 MHz ( period = 4.803 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|count[1]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.360 ns                ;
+; N/A   ; 209.82 MHz ( period = 4.766 ns )               ; I2C_master:i2c|start_stop    ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 4.323 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.829 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[3]      ; I2C_master:i2c|count[2]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.723 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[3]      ; I2C_master:i2c|count[0]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.719 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[3]      ; I2C_master:i2c|count[1]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.718 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|word_retain   ; I2C_master:i2c|sda_out       ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.554 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|word_retain   ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.539 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|start_stop    ; I2C_master:i2c|count[3]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 3.397 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[2]      ; I2C_master:i2c|count[3]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.920 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[0]      ; I2C_master:i2c|count[3]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.665 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[1]      ; I2C_master:i2c|count[3]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.620 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[3]      ; I2C_master:i2c|count[3]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.223 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[0]      ; I2C_master:i2c|count[2]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.154 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[0]      ; I2C_master:i2c|count[1]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 2.149 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[2]      ; I2C_master:i2c|count[2]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[1]      ; I2C_master:i2c|count[2]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.274 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[0]      ; I2C_master:i2c|count[0]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.272 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|count[1]      ; I2C_master:i2c|count[1]      ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.269 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[1]   ; I2C_master:i2c|data_out[1]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.232 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[3]   ; I2C_master:i2c|data_out[3]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.231 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|status_reg[0] ; I2C_master:i2c|status_reg[0] ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|start_stop    ; I2C_master:i2c|start_stop    ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.132 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[5]   ; I2C_master:i2c|data_out[5]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[0]   ; I2C_master:i2c|data_out[0]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[6]   ; I2C_master:i2c|data_out[6]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.095 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[7]   ; I2C_master:i2c|data_out[7]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.095 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[2]   ; I2C_master:i2c|data_out[2]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.094 ns                ;
+; N/A   ; Restricted to 220.02 MHz ( period = 4.545 ns ) ; I2C_master:i2c|data_out[4]   ; I2C_master:i2c|data_out[4]   ; I2C_scl    ; I2C_scl  ; None                        ; None                      ; 1.089 ns                ;
++-------+------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; tsu                                                                                    ;
++-------+--------------+------------+----------+------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                           ; To Clock ;
++-------+--------------+------------+----------+------------------------------+----------+
+; N/A   ; None         ; 1.135 ns   ; SPI_mosi ; SPI_slave:spi|data_in[1]     ; SPI_sclk ;
+; N/A   ; None         ; 1.019 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[6] ; SPI_sclk ;
+; N/A   ; None         ; 0.940 ns   ; SPI_mosi ; SPI_slave:spi|data_in[2]     ; SPI_sclk ;
+; N/A   ; None         ; 0.936 ns   ; SPI_mosi ; SPI_slave:spi|data_in[0]     ; SPI_sclk ;
+; N/A   ; None         ; 0.887 ns   ; SPI_mosi ; SPI_slave:spi|data_in[7]     ; SPI_sclk ;
+; N/A   ; None         ; 0.423 ns   ; I2C_scl  ; I2C_master:i2c|start         ; I2C_sda  ;
+; N/A   ; None         ; 0.334 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[4] ; SPI_sclk ;
+; N/A   ; None         ; 0.334 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[1] ; SPI_sclk ;
+; N/A   ; None         ; 0.327 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[5] ; SPI_sclk ;
+; N/A   ; None         ; 0.325 ns   ; SPI_mosi ; SPI_slave:spi|data_in[4]     ; SPI_sclk ;
+; N/A   ; None         ; 0.279 ns   ; SPI_mosi ; SPI_slave:spi|data_in[3]     ; SPI_sclk ;
+; N/A   ; None         ; 0.278 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[3] ; SPI_sclk ;
+; N/A   ; None         ; 0.273 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[7] ; SPI_sclk ;
+; N/A   ; None         ; 0.224 ns   ; I2C_scl  ; I2C_master:i2c|stop          ; I2C_sda  ;
+; N/A   ; None         ; 0.150 ns   ; SPI_mosi ; SPI_slave:spi|data_in[6]     ; SPI_sclk ;
+; N/A   ; None         ; 0.147 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[0] ; SPI_sclk ;
+; N/A   ; None         ; 0.145 ns   ; SPI_mosi ; SPI_slave:spi|data_in[5]     ; SPI_sclk ;
+; N/A   ; None         ; 0.038 ns   ; SPI_mosi ; SPI_slave:spi|command_reg[2] ; SPI_sclk ;
+; N/A   ; None         ; -0.484 ns  ; I2C_sda  ; I2C_master:i2c|data_out[3]   ; I2C_scl  ;
+; N/A   ; None         ; -0.486 ns  ; I2C_sda  ; I2C_master:i2c|data_out[6]   ; I2C_scl  ;
+; N/A   ; None         ; -0.488 ns  ; I2C_sda  ; I2C_master:i2c|data_out[1]   ; I2C_scl  ;
+; N/A   ; None         ; -0.491 ns  ; I2C_sda  ; I2C_master:i2c|data_out[4]   ; I2C_scl  ;
+; N/A   ; None         ; -0.495 ns  ; I2C_sda  ; I2C_master:i2c|data_out[2]   ; I2C_scl  ;
+; N/A   ; None         ; -0.608 ns  ; I2C_sda  ; I2C_master:i2c|status_reg[0] ; I2C_scl  ;
+; N/A   ; None         ; -0.721 ns  ; SPI_cs   ; SPI_slave:spi|count_1[0]     ; SPI_sclk ;
+; N/A   ; None         ; -0.721 ns  ; SPI_cs   ; SPI_slave:spi|count_1[1]     ; SPI_sclk ;
+; N/A   ; None         ; -0.721 ns  ; SPI_cs   ; SPI_slave:spi|count_byte1    ; SPI_sclk ;
+; N/A   ; None         ; -0.863 ns  ; I2C_sda  ; I2C_master:i2c|data_out[0]   ; I2C_scl  ;
+; N/A   ; None         ; -0.982 ns  ; I2C_sda  ; I2C_master:i2c|data_out[7]   ; I2C_scl  ;
+; N/A   ; None         ; -0.984 ns  ; I2C_sda  ; I2C_master:i2c|data_out[5]   ; I2C_scl  ;
+; N/A   ; None         ; -1.039 ns  ; SPI_cs   ; SPI_slave:spi|count_1[2]     ; SPI_sclk ;
++-------+--------------+------------+----------+------------------------------+----------+
+
+
++------------------------------------------------------------------------------------+
+; tco                                                                                ;
++-------+--------------+------------+------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                   ; To       ; From Clock ;
++-------+--------------+------------+------------------------+----------+------------+
+; N/A   ; None         ; 7.268 ns   ; SPI_slave:spi|miso     ; SPI_miso ; SPI_sclk   ;
+; N/A   ; None         ; 6.948 ns   ; I2C_master:i2c|sda_out ; I2C_sda  ; I2C_scl    ;
++-------+--------------+------------+------------------------+----------+------------+
+
+
++----------------------------------------------------------------------------------------------+
+; th                                                                                           ;
++---------------+-------------+-----------+----------+------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                           ; To Clock ;
++---------------+-------------+-----------+----------+------------------------------+----------+
+; N/A           ; None        ; 1.385 ns  ; SPI_cs   ; SPI_slave:spi|count_1[2]     ; SPI_sclk ;
+; N/A           ; None        ; 1.330 ns  ; I2C_sda  ; I2C_master:i2c|data_out[5]   ; I2C_scl  ;
+; N/A           ; None        ; 1.328 ns  ; I2C_sda  ; I2C_master:i2c|data_out[7]   ; I2C_scl  ;
+; N/A           ; None        ; 1.209 ns  ; I2C_sda  ; I2C_master:i2c|data_out[0]   ; I2C_scl  ;
+; N/A           ; None        ; 1.067 ns  ; SPI_cs   ; SPI_slave:spi|count_1[0]     ; SPI_sclk ;
+; N/A           ; None        ; 1.067 ns  ; SPI_cs   ; SPI_slave:spi|count_1[1]     ; SPI_sclk ;
+; N/A           ; None        ; 1.067 ns  ; SPI_cs   ; SPI_slave:spi|count_byte1    ; SPI_sclk ;
+; N/A           ; None        ; 0.954 ns  ; I2C_sda  ; I2C_master:i2c|status_reg[0] ; I2C_scl  ;
+; N/A           ; None        ; 0.841 ns  ; I2C_sda  ; I2C_master:i2c|data_out[2]   ; I2C_scl  ;
+; N/A           ; None        ; 0.837 ns  ; I2C_sda  ; I2C_master:i2c|data_out[4]   ; I2C_scl  ;
+; N/A           ; None        ; 0.834 ns  ; I2C_sda  ; I2C_master:i2c|data_out[1]   ; I2C_scl  ;
+; N/A           ; None        ; 0.832 ns  ; I2C_sda  ; I2C_master:i2c|data_out[6]   ; I2C_scl  ;
+; N/A           ; None        ; 0.830 ns  ; I2C_sda  ; I2C_master:i2c|data_out[3]   ; I2C_scl  ;
+; N/A           ; None        ; 0.308 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[2] ; SPI_sclk ;
+; N/A           ; None        ; 0.201 ns  ; SPI_mosi ; SPI_slave:spi|data_in[5]     ; SPI_sclk ;
+; N/A           ; None        ; 0.199 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[0] ; SPI_sclk ;
+; N/A           ; None        ; 0.196 ns  ; SPI_mosi ; SPI_slave:spi|data_in[6]     ; SPI_sclk ;
+; N/A           ; None        ; 0.122 ns  ; I2C_scl  ; I2C_master:i2c|stop          ; I2C_sda  ;
+; N/A           ; None        ; 0.073 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[7] ; SPI_sclk ;
+; N/A           ; None        ; 0.068 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[3] ; SPI_sclk ;
+; N/A           ; None        ; 0.067 ns  ; SPI_mosi ; SPI_slave:spi|data_in[3]     ; SPI_sclk ;
+; N/A           ; None        ; 0.021 ns  ; SPI_mosi ; SPI_slave:spi|data_in[4]     ; SPI_sclk ;
+; N/A           ; None        ; 0.019 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[5] ; SPI_sclk ;
+; N/A           ; None        ; 0.012 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[4] ; SPI_sclk ;
+; N/A           ; None        ; 0.012 ns  ; SPI_mosi ; SPI_slave:spi|command_reg[1] ; SPI_sclk ;
+; N/A           ; None        ; -0.077 ns ; I2C_scl  ; I2C_master:i2c|start         ; I2C_sda  ;
+; N/A           ; None        ; -0.541 ns ; SPI_mosi ; SPI_slave:spi|data_in[7]     ; SPI_sclk ;
+; N/A           ; None        ; -0.590 ns ; SPI_mosi ; SPI_slave:spi|data_in[0]     ; SPI_sclk ;
+; N/A           ; None        ; -0.594 ns ; SPI_mosi ; SPI_slave:spi|data_in[2]     ; SPI_sclk ;
+; N/A           ; None        ; -0.673 ns ; SPI_mosi ; SPI_slave:spi|command_reg[6] ; SPI_sclk ;
+; N/A           ; None        ; -0.789 ns ; SPI_mosi ; SPI_slave:spi|data_in[1]     ; SPI_sclk ;
++---------------+-------------+-----------+----------+------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.2 Build 151 09/26/2007 SJ Full Version
+    Info: Processing started: Mon Nov 05 10:37:01 2007
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off SPI_to_I2C -c SPI_to_I2C
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "SPI_sclk" is an undefined clock
+    Info: Assuming node "I2C_scl" is an undefined clock
+    Info: Assuming node "I2C_sda" is an undefined clock
+    Info: Assuming node "SPI_cs" is an undefined clock
+Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "divider:divide|count[9]" as buffer
+    Info: Detected ripple clock "SPI_slave:spi|count_byte" as buffer
+Info: Clock "SPI_sclk" has Internal fmax of 143.88 MHz between source register "SPI_slave:spi|count_byte1" and destination register "SPI_slave:spi|data_in[3]" (period= 6.95 ns)
+    Info: + Longest register to register delay is 3.032 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y3_N4; Fanout = 5; REG Node = 'SPI_slave:spi|count_byte1'
+        Info: 2: + IC(0.885 ns) + CELL(0.125 ns) = 1.010 ns; Loc. = LC_X3_Y3_N0; Fanout = 4; COMB Node = 'SPI_slave:spi|data_in[3]~700'
+        Info: 3: + IC(1.520 ns) + CELL(0.502 ns) = 3.032 ns; Loc. = LC_X4_Y3_N5; Fanout = 2; REG Node = 'SPI_slave:spi|data_in[3]'
+        Info: Total cell delay = 0.627 ns ( 20.68 % )
+        Info: Total interconnect delay = 2.405 ns ( 79.32 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "SPI_sclk" to destination register is 4.126 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.047 ns) = 1.047 ns; Loc. = PIN_96; Fanout = 26; CLK Node = 'SPI_sclk'
+            Info: 2: + IC(2.505 ns) + CELL(0.574 ns) = 4.126 ns; Loc. = LC_X4_Y3_N5; Fanout = 2; REG Node = 'SPI_slave:spi|data_in[3]'
+            Info: Total cell delay = 1.621 ns ( 39.29 % )
+            Info: Total interconnect delay = 2.505 ns ( 60.71 % )
+        Info: - Longest clock path from clock "SPI_sclk" to source register is 4.126 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.047 ns) = 1.047 ns; Loc. = PIN_96; Fanout = 26; CLK Node = 'SPI_sclk'
+            Info: 2: + IC(2.505 ns) + CELL(0.574 ns) = 4.126 ns; Loc. = LC_X4_Y3_N4; Fanout = 5; REG Node = 'SPI_slave:spi|count_byte1'
+            Info: Total cell delay = 1.621 ns ( 39.29 % )
+            Info: Total interconnect delay = 2.505 ns ( 60.71 % )
+    Info: + Micro clock to output delay of source is 0.235 ns
+    Info: + Micro setup delay of destination is 0.208 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: Clock "I2C_scl" has Internal fmax of 105.93 MHz between source register "I2C_master:i2c|count[2]" and destination register "I2C_master:i2c|data_out[2]" (period= 9.44 ns)
+    Info: + Longest register to register delay is 4.277 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y3_N8; Fanout = 13; REG Node = 'I2C_master:i2c|count[2]'
+        Info: 2: + IC(0.605 ns) + CELL(0.571 ns) = 1.176 ns; Loc. = LC_X6_Y3_N0; Fanout = 3; COMB Node = 'I2C_master:i2c|Equal1~90'
+        Info: 3: + IC(0.449 ns) + CELL(0.462 ns) = 2.087 ns; Loc. = LC_X6_Y3_N3; Fanout = 8; COMB Node = 'I2C_master:i2c|data_out[2]~156'
+        Info: 4: + IC(1.237 ns) + CELL(0.125 ns) = 3.449 ns; Loc. = LC_X7_Y3_N2; Fanout = 1; COMB Node = 'I2C_master:i2c|Decoder0~102'
+        Info: 5: + IC(0.459 ns) + CELL(0.369 ns) = 4.277 ns; Loc. = LC_X7_Y3_N5; Fanout = 2; REG Node = 'I2C_master:i2c|data_out[2]'
+        Info: Total cell delay = 1.527 ns ( 35.70 % )
+        Info: Total interconnect delay = 2.750 ns ( 64.30 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "I2C_scl" to destination register is 4.007 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_39; Fanout = 1; CLK Node = 'I2C_scl'
+            Info: 2: + IC(0.000 ns) + CELL(0.731 ns) = 0.731 ns; Loc. = IOC_X5_Y0_N3; Fanout = 22; COMB Node = 'I2C_scl~0'
+            Info: 3: + IC(2.702 ns) + CELL(0.574 ns) = 4.007 ns; Loc. = LC_X7_Y3_N5; Fanout = 2; REG Node = 'I2C_master:i2c|data_out[2]'
+            Info: Total cell delay = 1.305 ns ( 32.57 % )
+            Info: Total interconnect delay = 2.702 ns ( 67.43 % )
+        Info: - Longest clock path from clock "I2C_scl" to source register is 4.007 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_39; Fanout = 1; CLK Node = 'I2C_scl'
+            Info: 2: + IC(0.000 ns) + CELL(0.731 ns) = 0.731 ns; Loc. = IOC_X5_Y0_N3; Fanout = 22; COMB Node = 'I2C_scl~0'
+            Info: 3: + IC(2.702 ns) + CELL(0.574 ns) = 4.007 ns; Loc. = LC_X6_Y3_N8; Fanout = 13; REG Node = 'I2C_master:i2c|count[2]'
+            Info: Total cell delay = 1.305 ns ( 32.57 % )
+            Info: Total interconnect delay = 2.702 ns ( 67.43 % )
+    Info: + Micro clock to output delay of source is 0.235 ns
+    Info: + Micro setup delay of destination is 0.208 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: No valid register-to-register data paths exist for clock "I2C_sda"
+Info: No valid register-to-register data paths exist for clock "SPI_cs"
+Info: tsu for register "SPI_slave:spi|data_in[1]" (data pin = "SPI_mosi", clock pin = "SPI_sclk") is 1.135 ns
+    Info: + Longest pin to register delay is 5.053 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.731 ns) = 0.731 ns; Loc. = PIN_92; Fanout = 16; PIN Node = 'SPI_mosi'
+        Info: 2: + IC(3.583 ns) + CELL(0.739 ns) = 5.053 ns; Loc. = LC_X5_Y3_N2; Fanout = 2; REG Node = 'SPI_slave:spi|data_in[1]'
+        Info: Total cell delay = 1.470 ns ( 29.09 % )
+        Info: Total interconnect delay = 3.583 ns ( 70.91 % )
+    Info: + Micro setup delay of destination is 0.208 ns
+    Info: - Shortest clock path from clock "SPI_sclk" to destination register is 4.126 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.047 ns) = 1.047 ns; Loc. = PIN_96; Fanout = 26; CLK Node = 'SPI_sclk'
+        Info: 2: + IC(2.505 ns) + CELL(0.574 ns) = 4.126 ns; Loc. = LC_X5_Y3_N2; Fanout = 2; REG Node = 'SPI_slave:spi|data_in[1]'
+        Info: Total cell delay = 1.621 ns ( 39.29 % )
+        Info: Total interconnect delay = 2.505 ns ( 60.71 % )
+Info: tco from clock "SPI_sclk" to destination pin "SPI_miso" through register "SPI_slave:spi|miso" is 7.268 ns
+    Info: + Longest clock path from clock "SPI_sclk" to source register is 4.126 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.047 ns) = 1.047 ns; Loc. = PIN_96; Fanout = 26; CLK Node = 'SPI_sclk'
+        Info: 2: + IC(2.505 ns) + CELL(0.574 ns) = 4.126 ns; Loc. = LC_X4_Y2_N8; Fanout = 2; REG Node = 'SPI_slave:spi|miso'
+        Info: Total cell delay = 1.621 ns ( 39.29 % )
+        Info: Total interconnect delay = 2.505 ns ( 60.71 % )
+    Info: + Micro clock to output delay of source is 0.235 ns
+    Info: + Longest register to pin delay is 2.907 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y2_N8; Fanout = 2; REG Node = 'SPI_slave:spi|miso'
+        Info: 2: + IC(1.271 ns) + CELL(1.636 ns) = 2.907 ns; Loc. = PIN_91; Fanout = 0; PIN Node = 'SPI_miso'
+        Info: Total cell delay = 1.636 ns ( 56.28 % )
+        Info: Total interconnect delay = 1.271 ns ( 43.72 % )
+Info: th for register "SPI_slave:spi|count_1[2]" (data pin = "SPI_cs", clock pin = "SPI_sclk") is 1.385 ns
+    Info: + Longest clock path from clock "SPI_sclk" to destination register is 4.126 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.047 ns) = 1.047 ns; Loc. = PIN_96; Fanout = 26; CLK Node = 'SPI_sclk'
+        Info: 2: + IC(2.505 ns) + CELL(0.574 ns) = 4.126 ns; Loc. = LC_X3_Y3_N0; Fanout = 4; REG Node = 'SPI_slave:spi|count_1[2]'
+        Info: Total cell delay = 1.621 ns ( 39.29 % )
+        Info: Total interconnect delay = 2.505 ns ( 60.71 % )
+    Info: + Micro hold delay of destination is 0.138 ns
+    Info: - Shortest pin to register delay is 2.879 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.731 ns) = 0.731 ns; Loc. = PIN_95; Fanout = 19; CLK Node = 'SPI_cs'
+        Info: 2: + IC(1.371 ns) + CELL(0.777 ns) = 2.879 ns; Loc. = LC_X3_Y3_N0; Fanout = 4; REG Node = 'SPI_slave:spi|count_1[2]'
+        Info: Total cell delay = 1.508 ns ( 52.38 % )
+        Info: Total interconnect delay = 1.371 ns ( 47.62 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Allocated 115 megabytes of memory during processing
+    Info: Processing ended: Mon Nov 05 10:37:04 2007
+    Info: Elapsed time: 00:00:03
+
+

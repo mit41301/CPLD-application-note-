@@ -1,0 +1,37 @@
+SPI_to_I2C_test.v {1 {vlog -work work SPI_to_I2C_test.v
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_to_I2C_test
+
+Top level modules:
+	SPI_to_I2C_test
+
+} {} {}} {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/modelsim/SPI_to_I2C_test.v} {1 {vlog -work work {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/modelsim/SPI_to_I2C_test.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_to_I2C_test
+
+Top level modules:
+	SPI_to_I2C_test
+
+} {} {}} SPI_to_I2C.v {1 {vlog -work work SPI_to_I2C.v
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_to_I2C
+-- Compiling module SPI_slave
+-- Compiling module I2C_master
+-- Compiling module internal_oss_altufm_osc_7p3
+-- Compiling module divider
+
+Top level modules:
+	SPI_to_I2C
+
+} {} {}} {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/modelsim/SPI_to_I2C.v} {1 {vlog -work work {C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/modelsim/SPI_to_I2C.v}
+Model Technology ModelSim ALTERA vlog 6.1d Compiler 2006.01 Jan 23 2006
+-- Compiling module SPI_to_I2C
+-- Compiling module SPI_slave
+-- Compiling module I2C_master
+-- Compiling module internal_oss_altufm_osc_7p3
+-- Compiling module divider
+
+Top level modules:
+	SPI_to_I2C
+
+} {} {}}

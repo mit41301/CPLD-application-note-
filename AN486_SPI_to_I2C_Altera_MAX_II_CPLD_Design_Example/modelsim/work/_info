@@ -1,0 +1,86 @@
+m255
+13
+cModel Technology
+dC:\srikanth\altera\2ndcycle stuff\final stuff\nand flash\modelsim
+vdivider
+IK^MfMW7TFEL<fX81=29YD0
+V9@57^>lXX[9GdQ8lm3^cR1
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171089289
+FSPI_to_I2C.v
+L0 367
+V9@57^>lXX[9GdQ8lm3^cR1
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vI2C_master
+IDih6M@d0>`OfDQ@`Ye<[d2
+V1[h9@j<0hDI4^X09h0j7[0
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171089289
+FSPI_to_I2C.v
+L0 123
+V1[h9@j<0hDI4^X09h0j7[0
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@i2@c_master
+vinternal_oss_altufm_osc_7p3
+I4RL0h0fgb@nX70oBV=U>R0
+VJiBezM=^AOo8^WSH:i?eo0
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171089289
+FSPI_to_I2C.v
+L0 314
+VJiBezM=^AOo8^WSH:i?eo0
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+vSPI_slave
+I`O`ACO@>1@2h`0EE<P]`Q2
+V9<<AS6c4SW?j7UcYL_H>_0
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171089289
+FSPI_to_I2C.v
+L0 37
+V9<<AS6c4SW?j7UcYL_H>_0
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@s@p@i_slave
+vSPI_to_I2C
+ISi^RKAlV>fh5If1PV6:CG2
+V2kaI?PE1L`[dJdXAYjU];0
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171089289
+FSPI_to_I2C.v
+L0 7
+V2kaI?PE1L`[dJdXAYjU];0
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@s@p@i_to_@i2@c
+vSPI_to_I2C_test
+IMBXDgU7m=ooP7;O0HL7PH0
+VaO=V<0lkD=F8iThjO4EUi1
+dE:\MDN-WORK\2nd cycle wrap up\2nd cycle minus docs\SPI to I2C\modelsim
+w1171090519
+FSPI_to_I2C_test.v
+L0 7
+VaO=V<0lkD=F8iThjO4EUi1
+OV;L;6.1d;31
+r1
+31
+o-work work -O0
+tGenerateLoopIterationMax 100000
+n@s@p@i_to_@i2@c_test

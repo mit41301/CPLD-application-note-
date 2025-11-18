@@ -1,0 +1,205 @@
+Version 7.2 Build 151 09/26/2007 SJ Full Version
+39
+2318
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+C:|srikanth|altera|battle_board|rcvd_files|8feb07|quartus|extracted|QuartusII51sp1|cntr16_load_fi16|cntr16_load_fi1_new_restored_sri|db|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SPI_to_I2C
+# storage
+db|SPI_to_I2C.(0).cnf
+db|SPI_to_I2C.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|code|SPI_to_I2C.v
+d3d9aaa8a72cea26e09bede1be857eef
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
+}
+# lmf
+v:|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+internal_oss_altufm_osc_7p3
+# storage
+db|SPI_to_I2C.(1).cnf
+db|SPI_to_I2C.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|code|SPI_to_I2C.v
+d3d9aaa8a72cea26e09bede1be857eef
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# memory_file {
+none
+0
+}
+# hierarchies {
+internal_oss_altufm_osc_7p3:ufmosc
+}
+# lmf
+v:|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+divider
+# storage
+db|SPI_to_I2C.(2).cnf
+db|SPI_to_I2C.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|code|SPI_to_I2C.v
+d3d9aaa8a72cea26e09bede1be857eef
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+divider:divide
+}
+# lmf
+v:|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+SPI_slave
+# storage
+db|SPI_to_I2C.(3).cnf
+db|SPI_to_I2C.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|code|SPI_to_I2C.v
+d3d9aaa8a72cea26e09bede1be857eef
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+SPI_slave:spi
+}
+# lmf
+v:|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+I2C_master
+# storage
+db|SPI_to_I2C.(4).cnf
+db|SPI_to_I2C.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|code|SPI_to_I2C.v
+d3d9aaa8a72cea26e09bede1be857eef
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+I2C_master:i2c
+}
+# lmf
+v:|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

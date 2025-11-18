@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.135 ns
+From           : SPI_mosi
+To             : SPI_slave:spi|data_in[1]
+From Clock     : --
+To Clock       : SPI_sclk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.268 ns
+From           : SPI_slave:spi|miso
+To             : SPI_miso
+From Clock     : SPI_sclk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.385 ns
+From           : SPI_cs
+To             : SPI_slave:spi|count_1[2]
+From Clock     : --
+To Clock       : SPI_sclk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'I2C_scl'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 105.93 MHz ( period = 9.440 ns )
+From           : I2C_master:i2c|count[2]
+To             : I2C_master:i2c|data_out[2]
+From Clock     : I2C_scl
+To Clock       : I2C_scl
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SPI_sclk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 143.88 MHz ( period = 6.950 ns )
+From           : SPI_slave:spi|count_byte1
+To             : SPI_slave:spi|data_in[3]
+From Clock     : SPI_sclk
+To Clock       : SPI_sclk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

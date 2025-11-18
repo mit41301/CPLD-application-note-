@@ -1,0 +1,29 @@
+Quartus II Archive log --	C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.qarlog
+
+Archive:	C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.qar
+Date:		Sat Feb 10 11:54:47 2007
+Quartus II		6.0 Build 202 06/20/2006 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/code/SPI_to_I2C.v
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.asm.rpt
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.done
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.dpf
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.fit.rpt
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.fit.summary
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.flow.rpt
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.map.rpt
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.map.smsg
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.map.summary
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.pin
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.pof
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.qsf
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.tan.rpt
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/SPI_to_I2C.tan.summary
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/db/SPI_to_I2C.cbx.xml
+C:/srikanth/altera/2ndcycle stuff/final stuff/SPI to I2C/quartus/db/SPI_to_I2C.qpf
+c:/program files/altera/quartus/win/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

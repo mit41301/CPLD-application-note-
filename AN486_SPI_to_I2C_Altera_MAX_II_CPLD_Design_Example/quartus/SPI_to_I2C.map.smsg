@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at SPI_to_I2C.v(204): Always Construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at SPI_to_I2C.v(235): Always Construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at SPI_to_I2C.v(263): Always Construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at SPI_to_I2C.v(286): Always Construct contains both blocking and non-blocking assignments

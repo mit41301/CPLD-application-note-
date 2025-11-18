@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Mon Nov 05 10:36:45 2007
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Full Version
+Revision Name : SPI_to_I2C
+Top-level Entity Name : SPI_to_I2C
+Family : MAX II
+Total logic elements : 113
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0
